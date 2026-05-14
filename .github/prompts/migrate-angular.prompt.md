@@ -1,15 +1,14 @@
-Migrate this Angular 4 project to Angular 5.
-
+Migrate this Angular 5 project to Angular 6.
+ 
 Steps:
-1. Update package.json Angular dependencies to version 5
-2. Run npm install
-3. Replace deprecated APIs:
-   - HttpModule → HttpClientModule
-   - OpaqueToken → InjectionToken
-4. Fix errors
-5. Ensure project builds and runs
-
+1. Update Angular dependencies from version 5 to 6
+2. Update Angular CLI if required
+3. Update RxJS and zone.js to Angular 6 compatible versions
+4. Replace deprecated APIs if any
+5. Fix compilation and runtime errors
+6. Ensure the application builds and runs correctly
+ 
 Output:
 - List of updated files
-- Commands to run
+- Commands executed
 - Summary of changes
