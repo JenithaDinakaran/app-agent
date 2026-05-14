@@ -11,7 +11,7 @@ import { DataTableResource } from 'angular-4-data-table-bootstrap-4';
 export class AppComponent implements OnInit {
   title = 'Angular 4 CRUD Example Using Bootstrap Datatable';
   userForm: FormGroup;
-  @ViewChild('modalClose') modalClose:ElementRef;
+  @ViewChild('modalClose', { static: false }) modalClose: ElementRef;
   //Static data, you can change as per your need
   persons: any[] = [
 	    {"id": "1", "name": "Aaron 2Moore", "jobTitle": "Regional Configuration Producer"},
