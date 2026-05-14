@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { DataTableResource } from 'angular-4-data-table-bootstrap-4';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -40,19 +39,15 @@ export class AppComponent implements OnInit {
 	    { "id": "25","name": "Favian Abbott Miss", "jobTitle": "Lead Implementation Facilitator" },
 	    { "id": "26","name": "Carissa Kunze", "jobTitle": "Regional Division Technician"}
 	];
-	itemResource = new DataTableResource(this.persons);
 	items = [];
 	itemCount = 0;
-	params = {offset: 0, limit: 10}; //Static can be changed as per your need
 	formFlag = 'add';
 
-    constructor(){
-      this.itemResource.count().then(count => this.itemCount = count);
-      this.reloadItems(this.params);
-    }  
+    constructor() { }
 
-    reloadItems(params) {
-      this.itemResource.query(params).then(items => this.items = items);
+    reloadItems() {
+      this.items = [...this.persons];
+      this.itemCount = this.persons.length;
     }
 
     // special properties:
@@ -73,6 +68,7 @@ export class AppComponent implements OnInit {
 		  'name': new FormControl(null, Validators.required),
 		  'jobTitle': new FormControl(null, Validators.required)
 		});
+		this.reloadItems();
 	}
 
 	initUser(){
@@ -113,7 +109,6 @@ export class AppComponent implements OnInit {
 	}
 	//Reload table manually after add/edit
 	reloadTableManually(){
-		this.reloadItems(this.params);
-		this.itemResource.count().then(count => this.itemCount = count);
+		this.reloadItems();
 	}
 }

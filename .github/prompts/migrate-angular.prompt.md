@@ -1,24 +1,22 @@
-Migrate this Angular 7 project to Angular 8.
-
+Migrate this Angular 8 project to Angular 9.
+ 
 Steps:
-1. Update Angular dependencies from version 7 to 8
-2. Update Angular CLI to version 8 if required
-3. Update TypeScript and RxJS to Angular 8 compatible versions
-4. Ensure Node.js version compatibility (Node 10+ if required)
-5. Apply Angular migration schematics using ng update
-6. Replace deprecated APIs and resolve breaking changes
-7. Fix compilation and runtime errors
-8. Ensure the application builds and runs correctly
-
+1. Update Angular dependencies from version 8 to 9
+2. Update Angular CLI to version 9 if required
+3. Update TypeScript, RxJS, and zone.js to Angular 9 compatible versions
+4. Enable and handle Ivy compiler changes (if applicable)
+5. Replace deprecated APIs if any
+6. Fix compilation and runtime errors
+7. Ensure the application builds and runs correctly
+ 
 Commands:
-- ng update @angular/cli@8 @angular/core@8
+- ng update @angular/cli@9 @angular/core@9
 - npm install
 - ng build
 - ng serve
-
+ 
 Output:
 - List of updated files
 - Commands executed
 - Summary of changes
 - Any remaining warnings or manual fixes required
-``
