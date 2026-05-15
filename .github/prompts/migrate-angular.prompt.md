@@ -1,12 +1,12 @@
-Migrate this Angular 10 project to Angular 11.
+Migrate this Angular 11 project to Angular 12.
 
 Steps:
-1. Update Angular dependencies from version 10 to 11
-2. Update Angular CLI to version 11 (if required)
-3. Update TypeScript to Angular 11 compatible version (~4.0)
+1. Update Angular dependencies from version 11 to 12
+2. Update Angular CLI to version 12 (if required)
+3. Update TypeScript to Angular 12 compatible version (~4.2)
 4. Update RxJS and zone.js to compatible versions
-5. Apply Angular 11 migration updates
-6. Replace deprecated APIs (if any)
+5. Apply Angular 12 migration updates
+6. Remove or replace deprecated APIs
 7. Fix compilation and runtime errors
 8. Ensure the application builds and runs correctly
 

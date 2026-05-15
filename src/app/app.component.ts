@@ -77,7 +77,10 @@ export class AppComponent implements OnInit {
 		this.formFlag = 'add';
 	}
 	//Save user's data
-	saveUser(){
+	saveUser(formFlag?: string){
+		if (formFlag) {
+			this.formFlag = formFlag;
+		}
 		if(this.formFlag == 'add')
 		{
 			this.userForm.value.id= this.persons.length + 1;
