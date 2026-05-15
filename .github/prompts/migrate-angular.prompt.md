@@ -1,11 +1,11 @@
-Migrate this Angular 9 project to Angular 10.
+Migrate this Angular 10 project to Angular 11.
 
 Steps:
-1. Update Angular dependencies from version 9 to 10
-2. Update Angular CLI to version 10 (if required)
-3. Update TypeScript to Angular 10 compatible version (~3.9)
+1. Update Angular dependencies from version 10 to 11
+2. Update Angular CLI to version 11 (if required)
+3. Update TypeScript to Angular 11 compatible version (~4.0)
 4. Update RxJS and zone.js to compatible versions
-5. Apply Angular 10 migration updates
+5. Apply Angular 11 migration updates
 6. Replace deprecated APIs (if any)
 7. Fix compilation and runtime errors
 8. Ensure the application builds and runs correctly
