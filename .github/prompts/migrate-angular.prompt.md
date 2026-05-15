@@ -1,22 +1,23 @@
-Migrate this Angular 8 project to Angular 9.
- 
+Migrate this Angular 9 project to Angular 10.
+
 Steps:
-1. Update Angular dependencies from version 8 to 9
-2. Update Angular CLI to version 9 if required
-3. Update TypeScript, RxJS, and zone.js to Angular 9 compatible versions
-4. Enable and handle Ivy compiler changes (if applicable)
-5. Replace deprecated APIs if any
-6. Fix compilation and runtime errors
-7. Ensure the application builds and runs correctly
- 
-Commands:
-- ng update @angular/cli@9 @angular/core@9
-- npm install
-- ng build
-- ng serve
- 
+1. Update Angular dependencies from version 9 to 10
+2. Update Angular CLI to version 10 (if required)
+3. Update TypeScript to Angular 10 compatible version (~3.9)
+4. Update RxJS and zone.js to compatible versions
+5. Apply Angular 10 migration updates
+6. Replace deprecated APIs (if any)
+7. Fix compilation and runtime errors
+8. Ensure the application builds and runs correctly
+
+Constraints:
+- Do NOT change folder structure
+- Do NOT refactor unrelated code
+- Keep changes minimal and safe
+- Preserve existing functionality
+
 Output:
 - List of updated files
-- Commands executed
+- Commands executed (ng update, npm install, etc.)
 - Summary of changes
-- Any remaining warnings or manual fixes required
+- Any manual fixes required
