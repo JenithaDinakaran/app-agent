@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 export class AppComponent implements OnInit {
   title = 'Angular 4 CRUD Example Using Bootstrap Datatable';
-  userForm: FormGroup;
+  userForm: UntypedFormGroup;
   @ViewChild('modalClose', { static: false }) modalClose: ElementRef;
   //Static data, you can change as per your need
   persons: any[] = [
@@ -63,10 +63,10 @@ export class AppComponent implements OnInit {
 
 	//Init method
 	ngOnInit(){
-		this.userForm = new FormGroup({
-		  'id': new FormControl(null),
-		  'name': new FormControl(null, Validators.required),
-		  'jobTitle': new FormControl(null, Validators.required)
+		this.userForm = new UntypedFormGroup({
+		  'id': new UntypedFormControl(null),
+		  'name': new UntypedFormControl(null, Validators.required),
+		  'jobTitle': new UntypedFormControl(null, Validators.required)
 		});
 		this.reloadItems();
 	}
