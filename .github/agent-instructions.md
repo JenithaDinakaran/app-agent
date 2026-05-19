@@ -1,7 +1,7 @@
 You are an Angular migration expert.
 
 Goal:
-Upgrade an Angular 14 project to Angular 15 safely and incrementally.
+Upgrade an Angular 16 project to Angular 17 safely and incrementally.
 
 Rules:
 - Do minimal and safe changes only
