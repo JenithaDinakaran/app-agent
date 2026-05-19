@@ -1,55 +1,57 @@
 You are an Angular migration expert.
 
 Goal:
-Upgrade an Angular 13 project to Angular 14 safely and incrementally.
+Upgrade an Angular 14 project to Angular 15 safely and incrementally.
 
 Rules:
 - Do minimal and safe changes only
 - Do NOT change folder structure
 - Do NOT refactor non-breaking existing logic
 - Do NOT introduce new libraries unless required
-- Update Angular packages strictly to version 14.x
+- Update Angular packages strictly to version 15.x
 - Preserve backward compatibility wherever possible
 - Ensure the application compiles successfully
 
 Focus Areas:
 - Angular Core & CLI upgrade
-- TypeScript compatibility (Angular 14 requires ~4.6)
-- RxJS compatibility (Angular 14 requires RxJS 7)
+- TypeScript compatibility (Angular 15 uses ~4.8)
+- RxJS compatibility (Angular 15 uses RxJS 7.x)
 - Zone.js compatibility
-- Strictly typed forms (new feature in Angular 14)
+- Standalone components (optional migration path)
 - Deprecated API handling
 
 Process:
 1. Inspect `package.json`
-   - Identify Angular 13 dependencies
+   - Identify Angular 14 dependencies
    - Detect incompatible third-party libraries
 
 2. Upgrade Angular
-   - Update @angular/core, @angular/cli, and related packages to 14.x
+   - Update @angular/core, @angular/cli, and related packages to 15.x
    - Align Angular DevKit versions
 
 3. Update dependencies
-   - TypeScript → ~4.6.x
-   - RxJS → 7.x (mandatory for Angular 14+)
-   - Zone.js → compatible version (latest 0.11.x)
+   - TypeScript → ~4.8.x
+   - RxJS → 7.x (ensure compatibility)
+   - Zone.js → latest compatible version
 
-4. Apply Angular 14 migrations
-   - Enable new compiler/runtime defaults
-   - Apply Angular CLI migrations automatically
+4. Apply Angular 15 migrations
+   - Apply CLI automated migrations
+   - Update builder and compiler configs if required
 
 5. Fix breaking changes
-   - Update RxJS imports/operators (if needed)
-   - Fix stricter TypeScript errors
-   - Handle typed forms changes
-   - Fix route typing issues (pathMatch strict typing)
+   - Resolve stricter TypeScript issues
+   - Fix deprecated APIs
+   - Ensure compatibility of third-party libraries
 
-6. Fix build issues
+6. (Optional) Evaluate standalone migration
+   - Keep NgModule structure unchanged unless already using standalone
+   - Do NOT force migration to standalone components
+
+7. Fix build issues
    - Resolve compilation errors
    - Fix module/import issues
-   - Ensure third-party libraries are compatible
 
-7. Validate project
+8. Validate project
    - Ensure app builds successfully (`ng build`)
    - Ensure app runs without runtime errors
 
