@@ -1,8 +1,12 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
